@@ -3,7 +3,7 @@
 Expand the name of the chart.
 */}}
 {{- define "infinispan-helm-charts.name" -}}
-{{- default .Release.Name .Values.deploy.nameOverride | trunc 63 | trimSuffix "-" }}
+{{- default .Chart.Name .Values.deploy.nameOverride | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
 {{/*
