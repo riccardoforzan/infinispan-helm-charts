@@ -54,7 +54,6 @@ Pod custom Annotations
 {{/*
 Pod custom labels
 */}}
-
 {{- define "infinispan-helm-charts.podLabels" -}}
 {{- range .Values.deploy.podLabels }}
 {{ .key }}: {{ .value }}
@@ -64,7 +63,6 @@ Pod custom labels
 {{/*
 Service custom labels
 */}}
-
 {{- define "infinispan-helm-charts.svcLabels" -}}
 {{- range .Values.deploy.svcLabels }}
 {{ .key }}: {{ .value }}
@@ -105,7 +103,6 @@ Include for indentation
 {{/*
 Schema for default endpoint
 */}}
-
 {{- define "infinispan-helm-charts.defaultEndpointSchema" -}}
    {{- range .Values.deploy.infinispan.server.security.securityRealms }}
       {{- if eq .name "default" }}
